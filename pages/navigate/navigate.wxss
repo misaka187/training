@@ -1,0 +1,106 @@
+/* pages/navigate/navigate.wxss */
+
+page {
+  height: 100%;
+  background-color: rgb(242, 248, 248);
+}
+
+.container {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.tips-wrap {
+  display: flex;
+  height: 180rpx;
+  width: 100%;
+  background: #fff;
+  padding: 20rpx 0;
+}
+
+.tips-icon-wrap {
+  position: relative;
+  width: 150rpx;
+}
+
+.tips-icon {
+  position: absolute;
+  top: 10rpx;
+  right: 30rpx;
+  width: 60rpx;
+  height: 60rpx;
+  background: greenyellow;
+}
+
+.tips-content {
+  flex: 1;
+  font-size: 32rpx;
+  color: rgb(153, 153, 153);
+}
+
+.QA-wrap {
+  position: relative;
+  margin: 40rpx;
+}
+
+.question-box {
+  background-color: #fff;
+  padding: 30rpx;
+}
+
+.question-title {
+  font-size: 48rpx;
+  font-weight: 700;
+  height: 90rpx;
+  width: 100%;
+  border-bottom: 2rpx solid rgb(242, 242, 242);
+}
+
+.question-content {
+  font-size: 32rpx;
+  padding-top: 30rpx;
+  color: rgb(153, 153, 153);
+}
+
+.doc-wrap {
+  display: flex;
+  margin-top: 30rpx;
+}
+
+.doc-icon {
+  height: 150rpx;
+  width: 100rpx;
+  background: greenyellow;
+}
+
+.doc-box {
+  margin-left: 40rpx;
+  background: #fff;
+}
+
+.btn-box-wrap {
+  display: flex;
+  flex: 1;
+  padding: 30rpx;
+}
+
+.btn-box {
+  width: 180rpx;
+  text-align: center;
+  line-height: 90rpx;
+  box-shadow: 2rpx 1rpx 28rpx #42c2ad;
+  border-radius: 5rpx;
+}
+
+.btn-box:last-child {
+  margin-left: 60rpx;
+}
+
+.doc-box-text {
+  padding-top: 30rpx;
+  margin: 0 30rpx;
+}
+
+.last-box {
+  margin-top: 40rpx;
+}

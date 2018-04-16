@@ -1,0 +1,19 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='content'>
+    <view class="left-wrap">
+      <scroll-view scroll-y>
+        <view wx:for="{{firstArray}}" wx:key='firstMenu' wx:for-item='item'>
+          <view class="left-item {{currentTab==item.id?'active-item':''}}" bindtap='onFirstMenuHandle' id='{{item.id}}'>{{item.value}}</view>
+        </view>
+      </scroll-view>
+    </view>
+    <view class='right-wrap'>
+      <scroll-view scroll-y>
+        <view wx:for="{{firstArray[currentTab].subItem}}" wx:key='subMenu' wx:for-item='item'>
+          <view class="right-item" bindtap='onGoToNaviagePageHandle' id='{{item.id}}'>{{item.value}}</view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>

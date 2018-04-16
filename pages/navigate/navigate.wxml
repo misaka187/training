@@ -1,0 +1,50 @@
+<!--pages/navigate/navigate.wxml-->
+<view class='container'>
+  <view class='tips-wrap'>
+    <view class='tips-icon-wrap'>
+      <view class='tips-icon'></view>
+    </view>
+    <text class='tips-content'>比如 Mobx、Immer、Dob 等，这些库需要一个中间层与框架衔接，比如 mobx-react、redux-box、dob-react。解耦让框架更专注 View 层，</text>
+  </view>
+  <view class='QA-wrap'>
+    <scroll-view class='sc-wrap'>
+      <view class='question-box'>
+        <view class='question-title'>{{caseData.typeName}}</view>
+        <view class='question-content'>
+          <text>{{caseData.typeDes}}</text>
+        </view>
+      </view>
+      <view class='doc-wrap'>
+        <view class='doc-icon'></view>
+        <view class='doc-box'>
+          <view class='doc-box-text'>{{caseData.problem}}</view>
+          <view class='btn-box-wrap'>
+            <view class='btn-box' bindtap='checkProblemHandle' id='1'>是</view>
+            <view class='btn-box' bindtap='checkProblemHandle' id='0'>否</view>
+          </view>
+        </view>
+      </view>
+
+      <view wx:for="{{subProblemData}}" wx:key='subProblem' wx:for-item='item'>
+        <view class='doc-wrap'>
+          <view class='doc-icon'></view>
+          <view class='doc-box'>
+            <view class='doc-box-text'>{{item.answer}}</view>
+            <view class='btn-box-wrap'>
+              <view class='btn-box' bindtap='checkProblemHandle' id='1'>是</view>
+              <view class='btn-box' bindtap='checkProblemHandle' id='0'>否</view>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class='question-box last-box' wx:if="{{answerData.answer}}">
+        <view class='question-title'>导诊结果</view>
+        <view class='question-content'>
+          <text>{{answerData.answer}}</text>
+        </view>
+      </view>
+
+    </scroll-view>
+  </view>
+</view>
